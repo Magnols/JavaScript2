@@ -1,28 +1,35 @@
+let numeroUm = 1;
+let stringUm = '1';
+let numeroTrinta = 30;
+let stringTrinta = '30';
+let numeroDez = 10;
+let stringDez = '10';
+
 const variaveis = [
-    { nome: 'numeroUm', valor: 1 },
-    { nome: 'stringUm', valor: '1' },
-    { nome: 'numeroTrinta', valor: 30 },
-    { nome: 'stringTrinta', valor: '30' },
-    { nome: 'numeroDez', valor: 10 },
-    { nome: 'stringDez', valor: '10' },
+    { nome: 'numeroUm', valor: numeroUm },
+    { nome: 'stringUm', valor: stringUm },
+    { nome: 'numeroTrinta', valor: numeroTrinta },
+    { nome: 'stringTrinta', valor: stringTrinta },
+    { nome: 'numeroDez', valor: numeroDez },
+    { nome: 'stringDez', valor: stringDez },
 ];
 
 for (let i = 0; i < variaveis.length; i++) {
     for (let j = i + 1; j < variaveis.length; j++) {
-        const varA = variaveis[i];
-        const varB = variaveis[j];
+        const variavelA = variaveis[i];
+        const variavelB = variaveis[j];
 
-        const igual = varA.valor == varB.valor;
-        const mesmoTipo = typeof varA.valor === typeof varB.valor;
+        const valorIgual = variavelA.valor == variavelB.valor;
+        const tipoIgual = typeof variavelA.valor === typeof variavelB.valor;
 
-        const mensagem = igual && mesmoTipo ?
-            `As variáveis ${varA.nome} e ${varB.nome} têm o mesmo valor e o mesmo tipo` :
-            igual ?
-            `As variáveis ${varA.nome} e ${varB.nome} têm o mesmo valor, mas tipos diferentes` :
-            mesmoTipo ?
-            `As variáveis ${varA.nome} e ${varB.nome} têm valores diferentes, mas o mesmo tipo` :
-            `As variáveis ${varA.nome} e ${varB.nome} têm valores e tipos diferentes`;
-
-        console.log(mensagem);
+        if (valorIgual && tipoIgual) {
+            console.log(`As variáveis ${variavelA.nome} e ${variavelB.nome} têm o mesmo valor e o mesmo tipo`);
+        } else if (valorIgual && !tipoIgual) {
+            console.log(`As variáveis ${variavelA.nome} e ${variavelB.nome} têm o mesmo valor, mas tipos diferentes`);
+        } else if (!valorIgual && tipoIgual) {
+            console.log(`As variáveis ${variavelA.nome} e ${variavelB.nome} têm valores diferentes, mas o mesmo tipo`);
+        } else {
+            console.log(`As variáveis ${variavelA.nome} e ${variavelB.nome} têm valores e tipos diferentes`);
+        }
     }
 }
