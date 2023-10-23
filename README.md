@@ -22,3 +22,5 @@ As variáveis numeroDez e stringDez têm o mesmo valor, mas tipos diferentes.
 PS E:\Alura\JacvaScript\JavaScript2> 
 
 jornada no #2DaysOfCode
+
+jornada no #3DaysOfCode
