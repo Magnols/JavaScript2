@@ -24,3 +24,6 @@ PS E:\Alura\JacvaScript\JavaScript2>
 jornada no #2DaysOfCode
 
 jornada no #3DaysOfCode
+
+Para vê como ficol o código acesse o link a baixo:
+https://java-script2-six.vercel.app/
