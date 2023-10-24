@@ -1,10 +1,9 @@
-const numeroSecreto = 7;
 let tentativas = 0;
+const numeroSecreto = Math.floor(Math.random() * 11);
 
 while (tentativas < 3) {
 
     const tentativa = prompt("Chute um número de 0 a 10:");
-
 
     const numeroTentativa = parseInt(tentativa);
 
